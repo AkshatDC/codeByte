@@ -1,0 +1,85 @@
+inferential analysis overview 
+______________________________________________________________________________________________________________________________________________________________________________
+
+
+This project aims to analyze the impact of plastic pollution on marine life using statistical methods. 
+The goal is to understand the distribution of measurements related to plastic pollution, evaluate if the measurements significantly differ from a hypothetical mean,
+and explore any potential relationships between these measurements and geographical coordinates. The project aims to contribute to Sustainable Development Goal 14 
+(SDG 14): Life Below Water by providing insights and actionable conclusions from the data.
+______________________________________________________________________________________________________________________________________________________________________________
+
+Data Description
+
+The project utilizes four datasets:
+
+  1.	Raw Data: Contains raw observations related to plastic pollution, including measurements and geographical information.
+  2.	Cleaned Data 1: Processed data with cleaned and structured information, including measurements, density ranges, and location details.
+  3.	Cleaned Data 2: A dataset focused on species data with attributes like taxonomy, state province, and event dates.
+  4.	Cleaned Data 3: Contains biodiversity data with species counts, latitudes, and longitudes.
+______________________________________________________________________________________________________________________________________________________________________________
+
+Methodology
+
+The following statistical methods were applied to the cleaned data:
+1.	One-Sample T-Test:
+--> Hypothetical mean: 1
+--> Purpose: To determine if the sample mean of the measurements differs significantly from the hypothetical mean.
+
+2.	Descriptive Statistics:
+--> Calculated the mean, median, and standard deviation of the measurement values to summarize their distribution.
+
+3.	Correlation Analysis:
+--> Examined the correlation between measurement values and geographical coordinates (latitude and longitude) to understand spatial relationships.
+______________________________________________________________________________________________________________________________________________________________________________
+
+Results
+
+One-Sample T-Test:
+•	T-Statistic: 2.044
+•	P-Value: 0.042
+•	Interpretation: The p-value indicates a statistically significant difference between the sample mean and the hypothetical mean.
+______________________________________________________________________________________________________________________________________________________________________________
+
+Descriptive Statistics:
+
+•	Mean Measurement: 1.4807
+•	Median Measurement: 0.5297
+•	Standard Deviation of Measurement: 3.3169
+______________________________________________________________________________________________________________________________________________________________________________
+
+Correlation Analysis:
+
+•	Correlation with Latitude: 0.1127 (Weak positive correlation)
+•	Correlation with Longitude: -0.2310 (Weak negative correlation0)
+______________________________________________________________________________________________________________________________________________________________________________
+
+Findings and Visualizations
+
+Infographic Summary:
+--> Plastic pollution is a significant threat to marine life, causing death and harm to various species.
+--> Microplastics are particularly dangerous as they are ingested by marine organisms, entering the food chain.
+--> The infographic highlights statistics such as the percentage of marine species affected, the volume of plastic waste, and the most impacted regions.
+______________________________________________________________________________________________________________________________________________________________________________
+
+Data Visualization:
+•	Graph Analysis:
+--> The graph from the second image displays the relationship between plastic pollution levels and marine species affected.
+--> It shows a positive correlation between high plastic concentration areas and the number of affected marine species.
+--> Specific regions with the highest impact are identified, indicating hotspots for targeted conservation efforts.
+______________________________________________________________________________________________________________________________________________________________________________
+
+Conclusion
+
+1.	Impact on Species: The data clearly indicates that plastic pollution has a detrimental impact on marine biodiversity. 
+                       Species across various phyla and classes are affected, with some regions showing higher vulnerability.
+2.	Pollution Hotspots: Certain areas are identified as pollution hotspots where the concentration of plastic waste is significantly higher.
+                       These regions should be prioritized for clean-up and conservation efforts.
+3.	Policy Implications: The findings suggest the need for stricter regulations on plastic waste management and more robust conservation strategies to protect marine life.
+______________________________________________________________________________________________________________________________________________________________________________
+
+Recommendations:
+
+•	Awareness and Education: Increase public awareness about the impact of plastic pollution and promote sustainable practices.
+•	Policy and Regulation: Advocate for stronger policies to reduce plastic production and improve waste management systems.
+•	Research and Monitoring: Continue research to monitor the long-term effects of plastic pollution and the effectiveness of mitigation strategies.
+
