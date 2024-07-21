@@ -1,0 +1,256 @@
+Raw Data:
+   OBJECTID          Oceans         Regions SubRegions Sampling Method  \
+0     19755  Atlantic Ocean             NaN        NaN    Hand picking   
+1     20419  Atlantic Ocean             NaN        NaN    Hand picking   
+2     19423  Atlantic Ocean             NaN        NaN    Hand picking   
+3     19091  Atlantic Ocean  Gulf of Mexico        NaN    Hand picking   
+4     19162  Atlantic Ocean  Gulf of Mexico        NaN    Hand picking   
+
+   Measurement            Unit Density Range Density Class  \
+0          NaN  pieces/10 mins             0      Very Low   
+1          NaN  pieces/10 mins        40-200          High   
+2          NaN  pieces/10 mins        40-200          High   
+3          NaN  pieces/10 mins             0      Very Low   
+4          NaN  pieces/10 mins          2-40        Medium   
+
+       Short Reference  ...                                  Organization  \
+0  Tunnell et al. 2020  ...  University of Texas Marine Science Institute   
+1  Tunnell et al. 2020  ...  University of Texas Marine Science Institute   
+2  Tunnell et al. 2020  ...  University of Texas Marine Science Institute   
+3  Tunnell et al. 2020  ...  University of Texas Marine Science Institute   
+4  Tunnell et al. 2020  ...  University of Texas Marine Science Institute   
+
+        Keywords Accession Number  \
+0  Nurdle Patrol           259486   
+1  Nurdle Patrol           259486   
+2  Nurdle Patrol           259486   
+3  Nurdle Patrol           259486   
+4  Nurdle Patrol           259486   
+
+                                      Accession Link  Latitude Longitude  \
+0  https://www.ncei.noaa.gov/access/metadata/land...   34.5198  -77.3590   
+1  https://www.ncei.noaa.gov/access/metadata/land...   32.8695  -79.9656   
+2  https://www.ncei.noaa.gov/access/metadata/land...   39.6528  -75.5824   
+3  https://www.ncei.noaa.gov/access/metadata/land...   29.1252  -95.0622   
+4  https://www.ncei.noaa.gov/access/metadata/land...   28.9970  -95.2273   
+
+                     Date                              GlobalID        x  \
+0   7/14/2021 12:00:00 AM  5d5cd047-a18b-4fc7-9325-b1f1abc3855e -77.3590   
+1  11/23/2021 12:00:00 AM  a49d9058-6385-435e-8b75-96040e7425f0 -79.9656   
+2   4/17/2021 12:00:00 AM  d235b645-b1c1-49ea-9609-6fbdbbbc300f -75.5824   
+3    2/7/2021 12:00:00 AM  aefd382f-1688-4e53-848a-ecf6d392cbae -95.0622   
+4   2/28/2021 12:00:00 AM  245b4624-3c14-493e-8df7-0045568c6011 -95.2273   
+
+         y  
+0  34.5198  
+1  32.8695  
+2  39.6528  
+3  29.1252  
+4  28.9970  
+
+[5 rows x 22 columns]
+
+Cleaned Data 1:
+             Regions      SubRegions  Measurement Density Range Density Class  \
+0  Mediterranean Sea      Ionian Sea     0.046479       0.005-1        Medium   
+1  Mediterranean Sea    Balearic Sea     0.912000       0.005-1        Medium   
+2  Mediterranean Sea    Balearic Sea     0.436000       0.005-1        Medium   
+3  Mediterranean Sea    Adriatic Sea     3.203462        01-Oct          High   
+4  Mediterranean Sea  Tyrrhenian Sea     0.813379       0.005-1        Medium   
+
+    Latitude  Longitude                   Date  
+0  37.991333  15.461500  9/24/2021 12:00:00 AM  
+1  41.379079   2.194423       01-03-2021 00:00  
+2  41.175724   1.526081  3/28/2021 12:00:00 AM  
+3  44.218833  14.168000  6/27/2021 12:00:00 AM  
+4  43.168167  10.251500  7/15/2021 12:00:00 AM  
+
+Cleaned Data 2:
+       gbifID      phylum      class          order        family  \
+0  4442723602  Arthropoda    Insecta    Lepidoptera   Nymphalidae   
+1  4522436846  Arthropoda  Arachnida        Araneae     Araneidae   
+2  4454063836  Arthropoda    Insecta    Hymenoptera    Formicidae   
+3  4600134041    Chordata       Aves  Passeriformes  Muscicapidae   
+4  4438713736  Arthropoda    Insecta    Lepidoptera  Papilionidae   
+
+             genus               species stateProvince            eventDate  \
+0           Aglais  Aglais caschmirensis   Uttarakhand  2023-11-17T05:18:22   
+1          Argiope       Argiope anasuja   Maharashtra     2023-11-19T10:40   
+2  Pseudoneoponera                   NaN   Uttarakhand  2023-11-25T16:39:07   
+3         Saxicola       Saxicola maurus   Maharashtra     2023-11-27T16:10   
+4          Papilio        Papilio memnon     Karnataka     2023-11-05T08:14   
+
+       date  
+0  17-11-23  
+1  19-11-23  
+2  25-11-23  
+3  27-11-23  
+4  05-11-23  
+
+Cleaned Data 3:
+       phylum    class          order     genus  individualCount  \
+0  Arthropoda  Insecta    Lepidoptera    Eurema              NaN   
+1  Arthropoda  Insecta    Lepidoptera    Lemyra              NaN   
+2    Chordata     Aves  Coraciiformes    Merops              NaN   
+3  Arthropoda  Insecta    Lepidoptera  Zizeeria              NaN   
+4    Chordata     Aves  Coraciiformes   Halcyon              NaN   
+
+   decimalLatitude  decimalLongitude taxonRank  \
+0        18.140690         73.790253   SPECIES   
+1        27.039393         88.265685     GENUS   
+2        12.598370         77.946733   SPECIES   
+3        18.549872         73.786197   SPECIES   
+4        28.512440         77.483518   SPECIES   
+
+                        scientificName eventDate  
+0       Eurema hecabe (Linnaeus, 1758)  19-09-23  
+1                  Lemyra Walker, 1856  01-09-23  
+2       Merops orientalis Latham, 1801  17-09-23  
+3     Zizeeria karsandra (Moore, 1865)  16-09-23  
+4  Halcyon smyrnensis (Linnaeus, 1758)  02-09-23  
+
+Missing values in raw_data:
+OBJECTID               0
+Oceans               212
+Regions              761
+SubRegions          2643
+Sampling Method        0
+Measurement         2480
+Unit                   0
+Density Range          0
+Density Class          0
+Short Reference        0
+Long Reference         0
+DOI                    0
+Organization           0
+Keywords               0
+Accession Number       0
+Accession Link         0
+Latitude               0
+Longitude              0
+Date                   0
+GlobalID               0
+x                      0
+y                      0
+dtype: int64
+
+Missing values in clean_data1:
+Regions           6
+SubRegions       10
+Measurement      10
+Density Range    10
+Density Class    10
+Latitude         10
+Longitude        10
+Date             10
+dtype: int64
+
+Missing values in clean_data2:
+gbifID              0
+phylum              7
+class              79
+order             419
+family             17
+genus              59
+species          1556
+stateProvince    1149
+eventDate           0
+date                0
+dtype: int64
+
+Missing values in clean_data3:
+phylum                 25
+class                  78
+order                 536
+genus                  90
+individualCount     29552
+decimalLatitude         5
+decimalLongitude        5
+taxonRank               0
+scientificName          0
+eventDate               0
+dtype: int64
+
+Missing values after cleaning clean_data1:
+Regions          0
+SubRegions       0
+Measurement      0
+Density Range    0
+Density Class    0
+Latitude         0
+Longitude        0
+Date             0
+dtype: int64
+
+Missing values after cleaning clean_data2:
+gbifID           0
+phylum           0
+class            0
+order            0
+family           0
+genus            0
+species          0
+stateProvince    0
+eventDate        0
+date             0
+dtype: int64
+
+Missing values after cleaning clean_data3:
+phylum              0
+class               0
+order               0
+genus               0
+individualCount     0
+decimalLatitude     0
+decimalLongitude    0
+taxonRank           0
+scientificName      0
+eventDate           0
+dtype: int64
+
+Data Types in clean_data1:
+Regions           object
+SubRegions        object
+Measurement      float64
+Density Range     object
+Density Class     object
+Latitude         float64
+Longitude        float64
+Date              object
+dtype: object
+
+Data Types in clean_data2:
+gbifID            int64
+phylum           object
+class            object
+order            object
+family           object
+genus            object
+species          object
+stateProvince    object
+eventDate        object
+date             object
+dtype: object
+
+Data Types in clean_data3:
+phylum               object
+class                object
+order                object
+genus                object
+individualCount     float64
+decimalLatitude     float64
+decimalLongitude    float64
+taxonRank            object
+scientificName       object
+eventDate            object
+dtype: object
+
+One-sample t-test: T-statistic: 2.044237579011581, P-value: 0.04225383651704702
+Mean Measurement: 1.4806605238095238
+Median Measurement: 0.529742
+Standard Deviation of Measurement: 3.3169095289341843
+Correlation between Measurement and Latitude: 0.11274574376835964
+Correlation between Measurement and Longitude: -0.2309851009959379
+C:\Anaconda\Lib\site-packages\seaborn\_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context('mode.use_inf_as_na', True):
+
