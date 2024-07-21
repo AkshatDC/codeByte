@@ -1,1 +1,149 @@
+import pandas as pd
+from scipy import stats
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load the raw data (CSV file)
+raw_data = pd.read_csv(r'C:\Users\DARSHAN PARMAR\Downloads\IBM Internship\Marine_Microplastics_WGS84_2100180298903951090.csv')
+
+# Load the cleaned data (CSV files)
+clean_data1 = pd.read_csv(r'C:\Users\DARSHAN PARMAR\Downloads\IBM Internship\CleanedData1.csv')
+clean_data2 = pd.read_csv(r'C:\Users\DARSHAN PARMAR\Downloads\IBM Internship\cleaned_marine_species_data.csv')
+clean_data3 = pd.read_csv(r'C:\Users\DARSHAN PARMAR\Downloads\IBM Internship\Biodiversity_cleaned.csv')
+
+# Display the first few rows of each dataset to verify they are loaded correctly
+print("Raw Data:")
+print(raw_data.head())
+
+print("\nCleaned Data 1:")
+print(clean_data1.head())
+
+print("\nCleaned Data 2:")
+print(clean_data2.head())
+
+print("\nCleaned Data 3:")
+print(clean_data3.head())
+
+# Check for missing values
+print("\nMissing values in raw_data:")
+print(raw_data.isnull().sum())
+
+print("\nMissing values in clean_data1:")
+print(clean_data1.isnull().sum())
+
+print("\nMissing values in clean_data2:")
+print(clean_data2.isnull().sum())
+
+print("\nMissing values in clean_data3:")
+print(clean_data3.isnull().sum())
+
+# Handle missing values by imputation (mean for numerical columns, mode for categorical columns)
+def handle_missing_values(df):
+    # Convert relevant columns to numeric (if necessary)
+    numeric_columns = df.select_dtypes(include=['float64', 'int64']).columns
+    df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
+    
+    # Handle missing values in numeric columns
+    df[numeric_columns] = df[numeric_columns].fillna(df[numeric_columns].mean())
+
+    # Handle missing values in categorical columns
+    categorical_columns = df.select_dtypes(include=['object']).columns
+    for col in categorical_columns:
+        df[col] = df[col].fillna(df[col].mode()[0])  # Fill with the mode for categorical data
+    
+    return df
+
+# Apply the missing values handling function
+clean_data1 = handle_missing_values(clean_data1)
+clean_data2 = handle_missing_values(clean_data2)
+clean_data3 = handle_missing_values(clean_data3)
+
+# Verify that missing values are handled
+print("\nMissing values after cleaning clean_data1:")
+print(clean_data1.isnull().sum())
+
+print("\nMissing values after cleaning clean_data2:")
+print(clean_data2.isnull().sum())
+
+print("\nMissing values after cleaning clean_data3:")
+print(clean_data3.isnull().sum())
+
+# Data Type Verification
+print("\nData Types in clean_data1:")
+print(clean_data1.dtypes)
+
+print("\nData Types in clean_data2:")
+print(clean_data2.dtypes)
+
+print("\nData Types in clean_data3:")
+print(clean_data3.dtypes)
+
+# Perform One-Sample t-test on Measurement against a hypothetical mean value (e.g., 1)
+hypothetical_mean = 1
+
+# Check if 'Measurement' column exists in clean_data1
+if 'Measurement' in clean_data1.columns:
+    measurements = clean_data1['Measurement']
+    
+    # Check for non-numeric values in 'Measurement'
+    if not pd.api.types.is_numeric_dtype(measurements):
+        raise ValueError("Measurement column contains non-numeric values.")
+    
+    # One-Sample t-Test
+    t_stat, p_value = stats.ttest_1samp(measurements, hypothetical_mean)
+    print(f"\nOne-sample t-test: T-statistic: {t_stat}, P-value: {p_value}")
+
+    # Compute Descriptive Statistics for Measurement
+    mean_measurement = measurements.mean()
+    median_measurement = measurements.median()
+    std_measurement = measurements.std()
+
+    print(f"Mean Measurement: {mean_measurement}")
+    print(f"Median Measurement: {median_measurement}")
+    print(f"Standard Deviation of Measurement: {std_measurement}")
+
+    # Compute Correlation between Measurement and Latitude
+    if 'Latitude' in clean_data1.columns:
+        correlation_latitude = measurements.corr(clean_data1['Latitude'])
+        print(f"Correlation between Measurement and Latitude: {correlation_latitude}")
+    else:
+        print("Latitude column not found in clean_data1.")
+
+    # Compute Correlation between Measurement and Longitude
+    if 'Longitude' in clean_data1.columns:
+        correlation_longitude = measurements.corr(clean_data1['Longitude'])
+        print(f"Correlation between Measurement and Longitude: {correlation_longitude}")
+    else:
+        print("Longitude column not found in clean_data1.")
+else:
+    print("Measurement column not found in clean_data1.")
+
+# Example error handling for missing columns or data type issues
+try:
+    if 'Measurement' not in clean_data1.columns:
+        raise ValueError("Measurement column is missing in clean_data1.")
+    if 'Latitude' not in clean_data1.columns:
+        raise ValueError("Latitude column is missing in clean_data1.")
+    if 'Longitude' not in clean_data1.columns:
+        raise ValueError("Longitude column is missing in clean_data1.")
+except ValueError as e:
+    print(f"Error: {e}")
+
+# Visualization Example
+
+# Histogram of Measurement
+plt.figure(figsize=(10, 6))
+sns.histplot(clean_data1['Measurement'], kde=True)
+plt.title('Distribution of Measurements')
+plt.xlabel('Measurement')
+plt.ylabel('Frequency')
+plt.show()
+
+# Scatter plot for Measurement vs Latitude
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x='Latitude', y='Measurement', data=clean_data1)
+plt.title('Measurement vs Latitude')
+plt.xlabel('Latitude')
+plt.ylabel('Measurement')
+plt.show()
 
