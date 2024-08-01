@@ -32,7 +32,7 @@ print('T-static for micropollution:',t_stat2)
 print('P-value for micropollution:',p_value2)
 
 # The output will be :
-#Mean value of the column: 9.789786259541984
-#T-statistic: 10.358635324582876
-#P-value: 1.1423617464722175e-18
+#Mean value of the column 2 is: 0.7530149990839694
+#T-static for micropollution: 8.236484389088734
+#P-value for micropollution: 1.713150334192724e-13
 #Conclusion: Since, our p-value is greater than 0.05. So, we can conclude that there is a significant difference in micropollution levels between this groups which means that there will be different micropollution levels for each country.
