@@ -7,6 +7,9 @@
 #Perform T-Test: Compare the mean pollution levels between the two groups
 
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 import scipy.stats as stats
 
 # Read the CSV file into a Pandas DataFrame
@@ -36,3 +39,26 @@ print('P-value:', p_value)
 #P-value: 1.1423617464722175e-18
 
 #Conclusion: Since, our p-value is greater than 0.05. So, we can conclude that countries with high MPA percentages have significantly lower microplastic pollution levels than those with low MPA percentages.
+
+# Initialize the plot
+plt.figure(figsize=(10, 6))
+
+# Create a boxplot
+sns.boxplot(x='MPA_Group', y='Microplastic Pollution', data=df)
+
+# Calculate means
+high_mpa_mean = df[df['MPA_Group'] == 'High MPA']['Microplastic Pollution'].mean()
+low_mpa_mean = df[df['MPA_Group'] == 'Low MPA']['Microplastic Pollution'].mean()
+
+# Add mean lines
+plt.axhline(y=high_mpa_mean, color='blue', linestyle='--', linewidth=1, label=f'High MPA Mean: {high_mpa_mean:.2f}')
+plt.axhline(y=low_mpa_mean, color='orange', linestyle='--', linewidth=1, label=f'Low MPA Mean: {low_mpa_mean:.2f}')
+
+# Add titles and labels
+plt.title('Microplastic Pollution Levels by MPA Group')
+plt.xlabel('MPA Group')
+plt.ylabel('Microplastic Pollution Level')
+plt.legend()
+
+# Show the plot
+plt.show()
