@@ -38,11 +38,5 @@ print('P-value:', p_value)
 #T-statistic: 10.358635324582876
 #P-value: 1.1423617464722175e-18
 
-#Conclusion: Since, our p-value is greater than 0.05. So, we can conclude that countries with high MPA percentages have significantly lower microplastic pollution#Null Hypothesis (H0 ): There is no significant difference in microplastic pollution levels between countries with high MPA percentages and those with low MPA percentages.
-#Alternative Hypothesis (H1): Countries with high MPA percentages have significantly lower microplastic pollution levels than those with low MPA percentages.
-
-#Steps to Perform the T-Test:
-#Categorize Your Data: Divide countries into two groups based on their MPA percentage (e.g., above and below the median or another logical threshold).
-
-#Perform T-Test: Compare the mean pollution levels between the two groups
+#Conclusion: Since, our p-value is greater than 0.05. So, we can conclude that countries with high MPA percentages have significantly lower microplastic pollution.
 
