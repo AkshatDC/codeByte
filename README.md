@@ -11,12 +11,10 @@ Project Members:
 5. Jainil Patel
 6. Krishna Moghe
 7. Palak Patel
-8.  Raj Patel
-9.  Krisha Patel  
+8. Raj Patel
+9. Krisha Patel  
   
-  
-  _For the Concept Note of the Project:_
-  
-    https://docs.google.com/document/d/1yy8SYPO6p5attaPt7u4ZQVyA90PXBkA3_QQlSDBJTeE/edit?usp=sharing
+
+For the Concept Note of the Project: [Concept Note](https://docs.google.com/document/d/1yy8SYPO6p5attaPt7u4ZQVyA90PXBkA3_QQlSDBJTeE/edit?usp=sharing)
 
     
