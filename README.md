@@ -1,18 +1,19 @@
-# LIFE-BELOW-WATER
+# codeByte
 This shall be the official repository to keep track of all the work done on the Data Analytics Project.
 
 Project Details: 
   
 Project Members:  
-  Akshat Chhatriwala  
-  Darshan Parmar  
-  Ishita Akolkar  
-  Jainil Patel  
-  Krisha Patel  
-  Krishna Moghe  
-  Palak Patel  
-  Raj Patel  
-  Twisha Patel  
+1. Ishita Akolkar
+2. Twisha Patel
+3. Akshat Chhatriwala
+4. Darshan Parmar
+5. Jainil Patel
+6. Krishna Moghe
+7. Palak Patel
+8.  Raj Patel
+9.  Krisha Patel  
+  
   
   _For the Concept Note of the Project:_
   
