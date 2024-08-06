@@ -1,5 +1,5 @@
 # codeByte
-This shall be the official repository to keep track of all the work done on the Data Analytics Project. The project is submitted to IBM CSRBOX.
+This shall be the official repository to keep track of all the work done on the Data Analytics Project. The project is submitted to IBM CSRBOX. In regards to SDG 14.
 
 Project Details: 
   
